@@ -1,0 +1,123 @@
+\documentclass{thesis}
+
+\usepackage{blindtext}
+% \usepackage{showframe}
+% \usepackage{draftwatermark}
+% \SetWatermarkScale{4}
+
+\title{Auswirkungen von dreidimensionalen Geometrien auf Bewegungsabläufe in abstrakten Ontologien}
+\author{Max Mustermann}
+\studentnumber{123456789}
+\emailaddress{max.mustermann@uni-bremen.de}
+\universitylogo{./images/uni-logo.eps}
+\faculty{Fachbereich 03: Informatik/Mathematik}
+\thesistype{Master-Thesis}
+\glossaryfile{./glossary}
+\dates{01. April 2017}{30. September 2017}
+
+\begin{document}
+
+\maketitle
+
+\chapter*{Eidesstattliche Erklärung}
+
+Hiermit versichere ich, die vorliegende Arbeit selbstständig und nur unter Zuhilfenahme der angegebenen Quellen und Hilfsmittel verfasst zu haben. Die aus fremden Quellen direkt oder indirekt übernommenen Stellen sind als solche kenntlich gemacht.
+
+Ich bestätige außerdem, dass die vorliegende Arbeit noch nicht im Rahmen eines anderen Prüfungsverfahrens eingereicht wurde.
+
+\vspace{3cm}
+
+\dateplaceandsignature{\theauthor}
+
+\cleardoublepage
+
+\begin{abstract}[Zusammenfassung]
+  \blindtext
+\end{abstract}
+
+\begin{abstract}
+  \blindtext
+\end{abstract}
+
+\cleardoublepage
+
+\makelists
+
+\chapter{OAuth2 Replication API}
+
+\blindtext
+
+Foobar\cite{russell2010artificial} \gls{computer} baz\cite{McDermott198041} sudo\footnote{Some of foo and of bar} baaaar Listing \ref{lst:code1}.
+
+\begin{listing}
+  \caption{Some extremely powerful code}
+  \label{lst:code1}
+  \begin{lispcode}
+(defun foo (bar faz)
+  (if faz
+      bar
+      (mapcar #'foobar bar)))
+  \end{lispcode}
+\end{listing}
+
+\blindtext
+
+\begin{listing}
+  \caption{Some \emph{even more} powerful code}
+  \begin{lispcode}
+(defparameter *fluent* (make-fluent :value 1))
+  \end{lispcode}
+\end{listing}
+
+\blindtext
+
+\begin{table}
+  \caption{Some very interesting data}
+  \center
+  \begin{tabular}{l l r}
+  \toprule
+  \multicolumn{2}{c}{Parameter}\\
+  \cmidrule{1-2}
+  Algorithmus & Testgröße & Bilder pro Sekunde\\
+  \midrule
+  Depth-first search & 1.2 Millionen & 0.2\\
+  \addlinespace
+  Breadth-first search & 3.2 Millionen & 0.3\\
+  \addlinespace
+  A*-search & 1.0 Millionen & 2.3\\
+  \bottomrule
+  \end{tabular}
+\end{table}
+
+\Blinddocument
+
+\begin{figure}
+  \caption{The most interesting image}
+  \center
+  \begin{minipage}[b]{0.49\linewidth}
+    \includegraphics[width=\linewidth]{./images/placeholder.png}
+    \subcaption{Some foo}
+  \end{minipage}
+  \begin{minipage}[b]{0.49\linewidth}
+    \includegraphics[width=\linewidth]{./images/placeholder.png}
+    \subcaption{Some baz}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}
+  \caption{The most interesting image}
+  \centering
+  \begin{subfigure}{0.49\linewidth}
+    \includegraphics[height=100pt,keepaspectratio=true]{./images/placeholder.png}
+    \subcaption{Some foo}
+  \end{subfigure}
+  \begin{subfigure}{0.49\linewidth}
+    \includegraphics[height=100pt,keepaspectratio=true]{./images/placeholder.png}
+    \subcaption{Some foo}
+  \end{subfigure}
+\end{figure}
+
+\blindmathpaper
+
+\makeappendix
+\end{document}
