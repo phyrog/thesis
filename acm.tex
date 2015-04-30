@@ -1,0 +1,46 @@
+% Simulates acm bibliography in biblatex
+% Taken from http://tex.stackexchange.com/a/37090
+
+\DeclareNameAlias{default}{last-first}
+
+\AtBeginBibliography{%
+  \renewcommand*{\mkbibnamelast}[1]{\textsc{#1}}%
+  %% commas between authors
+  \renewcommand{\multinamedelim}{\addcomma\space}
+  \renewcommand{\finalnamedelim}{\addcomma\addspace\textsc{and}\space}
+}
+
+\DefineBibliographyStrings{english}{%
+ andothers = {\addcomma\addspace\textsc{et\addabbrvspace al}\adddot},
+ and = {\textsc{and}}
+}
+
+\renewcommand*{\labelnamepunct}{\space\space}
+
+\DeclareFieldFormat
+  [article,inbook,incollection,inproceedings,patent,thesis,unpublished]
+  {title}{#1}
+
+\renewbibmacro{in:}{%
+  \ifentrytype{article}{%
+  }{%
+    \printtext{\bibstring{in}\intitlepunct}%
+  }%
+}
+
+\renewbibmacro*{volume+number+eid}{%
+  \printfield{volume}%
+  \setunit*{\addcomma\space}%
+  \printfield{number}%
+  \setunit{\addcomma\space}%
+  \printfield{eid}}
+
+\DeclareFieldFormat{pages}{#1}
+
+\renewbibmacro*{publisher+location+date}{%
+  \printlist{publisher}%
+  \setunit*{\addcomma\space}%
+  \printlist{location}%
+  \setunit*{\addcomma\space}%
+  \usebibmacro{date}%
+  \newunit}

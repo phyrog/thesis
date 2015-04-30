@@ -28,8 +28,9 @@
 \end{minipage}
 }
 
-\usepackage[backend=biber]{biblatex}
+\usepackage[backend=biber,style=numeric]{biblatex}
 \addbibresource{thesis.bib}
+\input{acm.tex}
 
 \usepackage[hidelinks]{hyperref}
 \usepackage[toc]{glossaries}
