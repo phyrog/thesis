@@ -1,19 +1,20 @@
 TEXOPTS="-shell-escape"
+FILENAME="example"
+COMPILE=pdflatex ${TEXOPTS} ${FILENAME}.tex
 
 all:
-		pdflatex ${TEXOPTS} thesis.tex
-		makeglossaries thesis
-		biber thesis
-		pdflatex ${TEXOPTS} thesis.tex
-		pdflatex ${TEXOPTS} thesis.tex
-		pdflatex ${TEXOPTS} thesis.tex
+		${COMPILE}
+		makeglossaries ${FILENAME}
+		biber ${FILENAME}
+		${COMPILE}
+		${COMPILE}
 
 clean:
-		rm -f thesis.{aux,log,toc,out,lol,glo,gls,lof,glg,ist,lot,bcf,blg,run.xml,bbl} glossary.aux
+		rm -f ${FILENAME}.{aux,log,toc,out,lol,glo,gls,lof,glg,ist,lot,bcf,blg,run.xml,bbl} ${FILENAME}.glossary.aux
 		rm -f images/uni-logo-eps-converted-to.pdf
-		rm -rf _minted-thesis
+		rm -rf _minted-${FILENAME}
 
 cleanpdf:
-		rm -f thesis.pdf
+		rm -f ${FILENAME}.pdf
 
 cleanall: clean cleanpdf

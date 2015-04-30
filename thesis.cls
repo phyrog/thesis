@@ -29,7 +29,6 @@
 }
 
 \usepackage[backend=biber,style=numeric]{biblatex}
-\addbibresource{thesis.bib}
 \input{acm.tex}
 
 \usepackage{amsmath}
