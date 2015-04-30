@@ -5,7 +5,7 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[ngerman]{babel}
+\usepackage[english,ngerman]{babel}
 \usepackage{parskip}
 
 \usepackage{microtype}
