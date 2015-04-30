@@ -5,14 +5,17 @@
 
 \AtBeginBibliography{%
   \renewcommand*{\mkbibnamelast}[1]{\textsc{#1}}%
-  %% commas between authors
   \renewcommand{\multinamedelim}{\addcomma\space}
-  \renewcommand{\finalnamedelim}{\addcomma\addspace\textsc{and}\space}
 }
 
 \DefineBibliographyStrings{english}{%
  andothers = {\addcomma\addspace\textsc{et\addabbrvspace al}\adddot},
  and = {\textsc{and}}
+}
+
+\DefineBibliographyStrings{ngerman}{%
+ andothers = {\addcomma\addspace\textsc{et\addabbrvspace al}\adddot},
+ and = {\textsc{und}}
 }
 
 \renewcommand*{\labelnamepunct}{\space\space}

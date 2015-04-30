@@ -28,7 +28,7 @@
 \end{minipage}
 }
 
-\usepackage[backend=biber,style=numeric]{biblatex}
+\usepackage[backend=biber,style=alphabetic,firstinits=true]{biblatex}
 \input{acm.tex}
 
 \usepackage{amsmath}
