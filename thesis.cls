@@ -32,6 +32,8 @@
 \addbibresource{thesis.bib}
 \input{acm.tex}
 
+\usepackage{amsmath}
+\usepackage{amsfonts}
 \usepackage[hidelinks]{hyperref}
 \usepackage[toc]{glossaries}
 \usepackage{geometry}
@@ -49,9 +51,10 @@
 \usepackage{sourcecodepro}
 
 \usepackage[newfloat]{minted}
-% \usemintedstyle{github}
-\usemintedstyle{bw}
+\usemintedstyle{trac}
+% \usemintedstyle{bw}
 \newminted{lisp}{linenos,frame=leftline}
+\newcommand\inlinelisp[1]{\mintinline{lisp}{#1}}
 \SetupFloatingEnvironment{listing}{listname=Listingverzeichnis}
 
 \setkomafont{chapter}{\normalfont\Huge\scshape}
