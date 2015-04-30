@@ -17,11 +17,10 @@
 \let\oldabstract\abstract
 \let\endoldabstract\endabstract
 \renewenvironment{abstract}[1][Abstract]{
-\hspace{-0.5cm}
 \begin{minipage}{\textwidth}
-  \vspace{-0.1cm}
+  \vspace{0.15cm}
   \chapter*{#1}
-  \vspace{-0.95cm}
+  \vspace{-0.725cm}
   \oldabstract
     \thispagestyle{plain}
 }{
