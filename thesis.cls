@@ -18,9 +18,9 @@
 \let\endoldabstract\endabstract
 \renewenvironment{abstract}[1][Abstract]{
 \begin{minipage}{\textwidth}
-  \vspace{0.15cm}
+  \vspace{0.625cm}
   \chapter*{#1}
-  \vspace{-0.725cm}
+  \vspace{-0.575cm}
   \oldabstract
     \thispagestyle{plain}
 }{
@@ -38,6 +38,7 @@
 \usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{titling}
+\usepackage[normalem]{ulem}
 
 \usepackage{subcaption}
 \usepackage{booktabs}
@@ -57,6 +58,9 @@
 \newcommand\inlinelisp[1]{\mintinline{lisp}{#1}}
 \newcommand\inlineruby[1]{\mintinline{ruby}{#1}}
 \SetupFloatingEnvironment{listing}{listname=Listingverzeichnis}
+
+\usepackage{titlesec}
+\titleformat{\chapter}[display]{}{\vspace{-0.725cm}\large\scshape\filcenter\sout{\hfill}~\chaptername~\thechapter~\sout{\hfill}}{0pt}{\normalfont\Huge\scshape\raggedright}[]
 
 \setkomafont{chapter}{\normalfont\Huge\scshape}
 \setkomafont{section}{\normalfont\LARGE\scshape}
@@ -85,7 +89,7 @@
 \renewcommand{\thepage}{\Roman{page}}
 \begin{titlepage}
   \begin{center}
-    {\large\scshape\@thesistype\par}
+    {\large\scshape\sout{\hfill}~\@thesistype~\sout{\hfill}\par}
     \vspace{2cm}
     {\huge\scshape\@title\par}
     \vfill
