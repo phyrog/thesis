@@ -7,6 +7,10 @@
 \usepackage[T1]{fontenc}
 \usepackage[english,ngerman]{babel}
 \usepackage{parskip}
+\usepackage[toc,page]{appendix}
+\renewcommand\appendixname{Anhang}
+\renewcommand\appendixpagename{\normalfont\textsc\appendixname}
+\renewcommand\appendixtocname{\appendixname}
 
 \usepackage{microtype}
 
@@ -134,9 +138,22 @@
 \renewcommand{\thepage}{\arabic{page}}
 }
 
-\newcommand\makeappendix{
-\appendix
-\printglossaries
-\cleardoublepage
-\printbibliography[heading=bibintoc]
+\let\oldappendices\appendices
+\let\endoldappendices\endappendices
+\renewenvironment{appendices}{
+\oldappendices
+\let\oldchaptername\chaptername
+\renewcommand\chaptername{\appendixname}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
+\makeatletter
+\addtocontents{toc}{%
+  \begingroup
+  \let\protect\l@chapter\protect\l@section
+  \let\protect\l@section\protect\l@subsection
+}
+\makeatother
+}{
+\addtocontents{toc}{\endgroup}
+\renewcommand\chaptername{\oldchaptername}
+\endoldappendices
 }
