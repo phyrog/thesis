@@ -80,9 +80,11 @@ Note that \inlinelisp{(foo bar)} runs\cite{patrick_rothfuss_name_2012} in \( \fo
 
 \begin{listing}
   \caption{Some \emph{even more} powerful $\lambda$ code}
-  \begin{lispcode}
-(defparameter *fluent* (make-fluent :value 1))
-  \end{lispcode}
+  \begin{rubycode}
+def foo
+  { bar: 'baz', hoo: lambda { |val| "foo bar #{val} zack" } }
+end
+  \end{rubycode}
 \end{listing}
 
 \blindtext

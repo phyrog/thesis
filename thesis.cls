@@ -53,7 +53,9 @@
 \usemintedstyle{trac}
 % \usemintedstyle{bw}
 \newminted{lisp}{linenos,frame=leftline}
+\newminted{ruby}{linenos,frame=leftline}
 \newcommand\inlinelisp[1]{\mintinline{lisp}{#1}}
+\newcommand\inlineruby[1]{\mintinline{ruby}{#1}}
 \SetupFloatingEnvironment{listing}{listname=Listingverzeichnis}
 
 \setkomafont{chapter}{\normalfont\Huge\scshape}
