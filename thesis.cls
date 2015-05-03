@@ -69,6 +69,7 @@
 \newcommand\thesistype[1]{\newcommand\@thesistype{#1}}
 \newcommand\studentnumber[1]{\newcommand\@studentnumber{#1}}
 \newcommand\emailaddress[1]{\newcommand\@emailaddress{#1}}
+\newcommand\reviewers[2]{\newcommand\@firstreviewer{#1} \newcommand\@secondreviewer{#2}}
 \newcommand\universitylogo[1]{\newcommand\@universitylogo{#1}}
 \newcommand\faculty[1]{\newcommand\@faculty{#1}}
 \newcommand\glossaryfile[1]{\include{#1} \makeglossaries}
@@ -102,8 +103,8 @@
     \vfill
     \begin{minipage}{\textwidth}
       \begin{tabularx}{\textwidth}{R@{\hspace{0.5cm}}L}
-        Erstgutachter & Prof. Dr. Michael Mustermann\\
-        Zweitgutachter & Dr. Martha Mustermann
+        Erstgutachter & \@firstreviewer\\
+        Zweitgutachter & \@secondreviewer
       \end{tabularx}
     \end{minipage}
     \vfill
