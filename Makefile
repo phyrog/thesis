@@ -1,18 +1,12 @@
-TEXOPTS="-shell-escape"
-FILENAME="example"
+TEXOPTS=-shell-escape
 
-all: pdf
-
-pdf:
-		latexmk -pdflatex='pdflatex ${TEXOPTS}' -pdf -quiet ${FILENAME}.tex
-
-debug:
-		latexmk -pdflatex='pdflatex ${TEXOPTS}' -pdf ${FILENAME}.tex
+%:
+		latexmk -pdflatex='pdflatex ${TEXOPTS}' -pdf -quiet $@.tex
 
 clean:
-		rm -f ${FILENAME}.{aux,log,toc,out,lol,glo,gls,lof,glg,ist,lot,bcf,blg,run.xml,bbl,fls,fdb_latexmk} ${FILENAME}.glossary.aux
+		rm -f *.{aux,log,toc,out,lol,glo,gls,lof,glg,ist,lot,bcf,blg,run.xml,bbl,fls,fdb_latexmk}
 		rm -f images/uni-logo-eps-converted-to.pdf
-		rm -rf _minted-${FILENAME}
+		rm -rf _minted-*
 
 cleanpdf:
 		rm -f ${FILENAME}.pdf
