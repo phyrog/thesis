@@ -7,6 +7,12 @@ My master thesis LaTeX class
 * latexmk
 * pygments (the version for python2; best install via `(sudo) pip2 install pygments`)
 
+## How to use
+
+* copy all `example.*` files to `<newname>.*`
+* change the line with `\addbibresource` in the main `.tex` file
+* `make <newname>`
+
 ## Example PDF output
 [Example PDF](/../screenshots/example.pdf?raw=true)
 
