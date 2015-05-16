@@ -38,7 +38,7 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage[hidelinks]{hyperref}
-\usepackage[toc]{glossaries}
+\usepackage[toc,acronym]{glossaries}
 \usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{titling}
