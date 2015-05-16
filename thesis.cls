@@ -6,6 +6,17 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english,ngerman]{babel}
+\usepackage[autostyle=true,german=quotes]{csquotes}
+\renewcommand{\mktextquote}[6]{%
+  #1%
+  \itshape%
+  #2#4#3#6#5%
+}
+\renewcommand{\mkblockquote}[4]{%
+  \itshape%
+  #1#2#4#3%
+}
+
 \usepackage{parskip}
 \usepackage[toc,page]{appendix}
 \renewcommand\appendixname{Anhang}
@@ -39,6 +50,8 @@
 \usepackage{amsfonts}
 \usepackage[hidelinks]{hyperref}
 \usepackage[toc,acronym]{glossaries}
+\renewcommand{\glstextformat}[1]{\textsc{#1}}
+
 \usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{titling}
