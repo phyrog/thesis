@@ -13,6 +13,17 @@ My master thesis LaTeX class
 * change the line with `\addbibresource` in the main `.tex` file
 * `make <newname>`
 
+### Glossaries
+
+To use glossaries in combination with latexmk, you need to put the following into `~/.latexmkrc`:
+
+```
+add_cus_dep('glo', 'gls', 0, 'makeglossaries');
+sub makeglossaries {
+  system("makeglossaries \"$_[0]\"");
+}
+```
+
 ## Example PDF output
 [Example PDF](/../screenshots/example.pdf?raw=true)
 
