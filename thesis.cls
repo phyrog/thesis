@@ -109,6 +109,7 @@
     {\large\scshape\sout{\hfill}~\@thesistype~\sout{\hfill}\par}
     \vspace{2cm}
     {\huge\scshape\@title\par}
+    {\Large\scshape\@subtitle\par}
     \vfill
     {\Large\@author}\par
     \vspace{0.5cm}
